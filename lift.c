@@ -14,6 +14,11 @@ void lift(){
         sleep(1);
         before++;
     }
+    while (lantai < before){
+        printf("Lantai %d\n", before);
+        sleep(1);
+        before--;
+    }
     printf("Sekarang ada di lantai : %d\n", before);
     printf("Silahkan masukan lantai tujuan : ");
     scanf("%d", &lantai);
@@ -21,6 +26,11 @@ void lift(){
         printf("Lantai %d\n", before);
         sleep(1);
         before--;
+    }
+    while (lantai > before){
+        printf("Lantai %d\n", before);
+        sleep(1);
+        before++;
     }
     goto ulang;
 }
